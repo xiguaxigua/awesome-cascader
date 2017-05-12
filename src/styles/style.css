@@ -1,0 +1,45 @@
+.awesome-cascader-toggle-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color .5s;
+  padding: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #818181;
+}
+
+.awesome-cascader-toggle-btn:hover {
+  border-color: #19d4ae;
+}
+
+.awesome-cascader-global-container {
+  position: absolute;
+}
+
+.awesome-cascader-global-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.awesome-cascader-items-container {
+  position: relative;
+  outline: 1px solid #ccc;
+}
+
+.awesome-cascader-items-container li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.awesome-cascader-items-container-hover.awesome-cascader-items-container-hover {
+  display: block;
+}
+
+.awesome-cascader-items-container-children {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  display: none;
+}
