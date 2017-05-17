@@ -1,0 +1,91 @@
+.awesome-cascader {
+  /* utils */
+}
+.awesome-cascader .ac-title {
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  padding-left: 10px;
+  vertical-align: middle;
+  color: #888;
+  border-radius: 4px;
+  position: relative;
+  user-select: none;
+  padding-right: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.awesome-cascader .top-triangle::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top: 0;
+  border-bottom-color: #ccc;
+  transition: transform .3s;
+  transform: translateY(-50%) rotate(0);
+}
+.awesome-cascader .bottom-triangle::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top: 0;
+  border-bottom-color: #ccc;
+  transition: transform .3s;
+  transform: translateY(-50%) rotate(-180deg);
+}
+.awesome-cascader .one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cascader-popper {
+  position: absolute;
+}
+
+.awesome-cascader-list {
+  white-space: nowrap;
+  position: relative;
+}
+.awesome-cascader-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #e1e1e1;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.awesome-cascader-list ul li {
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.awesome-cascader-list ul li:not(:last-child) {
+  border-bottom: 1px solid #e1e1e1;
+}
+.awesome-cascader-list ul li:hover {
+  background-color: #f6f6f6;
+}
+.awesome-cascader-list ul li.checked {
+  background-color: #1c8de0;
+  color: #fff;
+}
+.awesome-cascader-list .one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

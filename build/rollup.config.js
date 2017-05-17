@@ -4,13 +4,11 @@ var commonjs = require('rollup-plugin-commonjs')
 var babel = require('rollup-plugin-babel')
 var eslint = require('rollup-plugin-eslint')
 var css = require('rollup-plugin-postcss')
+var vue = require('rollup-plugin-vue')
 
 rollup.rollup({
-  entry: 'src/index.js',
+  entry: 'src/index.vue',
   plugins: [
-    css({
-      extensions: [ '.css' ],
-    }),
     eslint({
       throwError: true,
       exclude: [
@@ -18,8 +16,11 @@ rollup.rollup({
         'node_modules/**'
       ]
     }),
+    vue({
+      css: 'lib/index.css'
+    }),
     resolve({
-      extensions: ['.js']
+      extensions: ['.js', '.vue']
     }),
     commonjs(),
     babel({ exclude: 'node_modules/**' })

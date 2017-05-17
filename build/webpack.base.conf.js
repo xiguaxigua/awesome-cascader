@@ -13,15 +13,28 @@ module.exports = {
     filename: 'index.js',
     publicPath: '/'
   },
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {
+      'vue$': 'vue/dist/vue.runtime.esm.js'
+    }
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|vue)$/,
         loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('example'), resolve('src')],
+        enforce: "pre",
+        include: [resolve('examples'), resolve('src')],
         options: {
           formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          sourceMap: true
         }
       },
       {
@@ -32,7 +45,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      },
+      }
     ]
   }
 }

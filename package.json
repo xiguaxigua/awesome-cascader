@@ -52,7 +52,13 @@
     "rollup-plugin-eslint": "3.0.0",
     "rollup-plugin-node-resolve": "2.0.0",
     "rollup-plugin-postcss": "^0.4.1",
+    "rollup-plugin-vue": "^2.4.0",
+    "rollup-plugin-vue2": "0.8.0",
     "style-loader": "0.14.1",
+    "vue": "2.3.2",
+    "vue-loader": "11.1.4",
+    "vue-style-loader": "2.0.4",
+    "vue-template-compiler": "2.3.2",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.4.2",
     "webpack-merge": "4.1.0"
