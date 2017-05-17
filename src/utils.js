@@ -23,7 +23,7 @@ export function createElement (tagName, attrs) {
 }
 
 export function delegate (el, className, eventName, callback, stop) {
-  el.addEventListener(eventName, (e) => {
+  const eventHandler = (e) => {
     let target = e.target
     while (target && target !== el) {
       if (target.classList.contains(className)) {
@@ -32,5 +32,7 @@ export function delegate (el, className, eventName, callback, stop) {
       }
       target = target.parentNode
     }
-  })
+  }
+  el.addEventListener(eventName, eventHandler)
+  return function () { el.removeEventListener(eventName, eventHandler) }
 }

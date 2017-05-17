@@ -29,12 +29,26 @@
   outline: 1px solid #ccc;
 }
 
+.awesome-cascader-items-container-item input[type='checkbox'] {
+  display: none;
+}
+
+.awesome-cascader-items-container-item input[type='checkbox']:checked ~ label {
+  background-color: #1c8de0;
+  color: #fff;
+}
+
 .awesome-cascader-items-container li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
 
 .awesome-cascader-items-container-hover.awesome-cascader-items-container-hover {
   display: block;
+}
+
+.awesome-cascader-items-conteiner-label {
+  display: inline-block;
+  width: 100%;
 }
 
 .awesome-cascader-items-container-children {
